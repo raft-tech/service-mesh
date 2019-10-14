@@ -3,6 +3,11 @@ Minikube is a single node Kubernetes Cluster solution which runs locally on your
 
 Very useful for developers/administrators to test their work locally
 
+# Prerequisites
+*Docker is needed prior to Minikube install*
+https://www.docker.com/products/docker-desktop
+Download Docker-Desktop for MAC
+
 # Steps to Install Minikube on Windows
 **Step1: Install Kubectl command line utility**
 
