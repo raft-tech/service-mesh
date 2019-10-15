@@ -25,8 +25,8 @@ touch cluster.tf
 3. Store the JSON file under creds directory that we created
 ```
 
-**Step3: cluster.tf has gke cluster configuration and provider.tf has project and other metadata info**
-cluster.tf
+**Step3: cluster.tf has gke cluster configuration and provider.tf has project and provider info**
+**cluster.tf**
 ```
 resource "google_container_cluster" "gke" {
   name         = "gke-cluster-hsi"
@@ -57,13 +57,14 @@ resource "google_container_node_pool" "gke_nodes" {
 }
 ```
 
-provider.tf
+**provider.tf**
 ```
 provider "google" {
   credentials = "${file("creds/xxx.json")}"
   project     = "<ENTER PROJECT NAME>"
   region      = "us-east1"
 }
+```
 
 **Step4: Initialize terraform**
 ```
@@ -80,5 +81,4 @@ terraform plan
 terraform apply
 ```
 
-Terraform code is available in this repo under gke_terraform
-
+**Terraform code is available in this repo under gke_terraform**
