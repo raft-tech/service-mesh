@@ -137,4 +137,4 @@ zipkin                   ClusterIP      10.59.254.96    <none>          9411/TCP
                                                   6m24s
 ```
 
-# This concludes Istio Install on GKE; We shall now explore istio's capabilities by deploying microservice applications on kubernetes platform
+**This concludes Istio Install on GKE; We shall now explore istio's capabilities by deploying microservice applications on kubernetes platform**
