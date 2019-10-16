@@ -1,0 +1,13 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: sa-frontend
+spec:
+  host: sa-frontend
+  subsets:
+  - name: sa-frontend-white
+    labels:
+      version: white
+  - name: sa-frontend-green
+    labels:
+      version: green
