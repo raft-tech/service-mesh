@@ -23,8 +23,5 @@ kubectl -n istio-system port-forward \
     $(kubectl -n istio-system get pod -l app=grafana \
     -o jsonpath={.items[0].metadata.name}) 3000
 ```
-![Alt text](https://github.com/HealthStarInformatics/service-mesh/blob/master/grafana-metrics/istio-grafana-mesh-dashboard.png?raw=true)
-
-![Alt text](https://github.com/HealthStarInformatics/service-mesh/blob/master/grafana-metrics/istio-grafana-performance-dashboard.png?raw=true)
 
 **There is lot to explore with grafana metrics but this should give us a quick headstart into leveraging grafana for metrics**

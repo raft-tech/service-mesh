@@ -30,14 +30,4 @@ kubectl port-forward \
 username: admin
 password: admin
 
-![Alt text](https://github.com/HealthStarInformatics/service-mesh/blob/master/kiali/kiali-login.png?raw=true)
-
-![Alt text](https://github.com/HealthStarInformatics/service-mesh/blob/master/kiali/kiali-overview.png?raw=true)
-
-![Alt text](https://github.com/HealthStarInformatics/service-mesh/blob/master/kiali/kiali-applications.png?raw=true)
-
-![Alt text](https://github.com/HealthStarInformatics/service-mesh/blob/master/kiali/kiali-istio-config.png?raw=true)
-
-![Alt text](https://github.com/HealthStarInformatics/service-mesh/blob/master/kiali/kiali-istio-config1.png?raw=true)
-
 **kiali is a powerful console that complements Istio**
