@@ -77,6 +77,7 @@ istio_requests_total{destination_service="guestbook.istio-demo.svc.cluster.local
 ![Alt text](https://github.com/HealthStarInformatics/service-mesh/blob/master/observability-metrics-tracing/images/prometheus-5.png?raw=true)
 
 **Step4: Access Kiali**
+
 Kiali is an open-source project that installs on top of Istio to visualize your service mesh
 ```
 kubectl -n istio-system port-forward \
