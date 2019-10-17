@@ -42,7 +42,7 @@ echo $PUBLIC_IP
 Access the application on your browser
 HTTP://PUBLIC_IP
 ```
-![Alt text](https://github.com/HealthStarInformatics/service-mesh/blob/master/istio-feature-demos/blue-green/istio-manifests/traffic-routing/v1-app.png?raw=true)
+![Alt text](https://github.com/HealthStarInformatics/service-mesh/blob/master/istio-feature-demos/sentiment-analyzer-app/blue-green/istio-manifests/traffic-routing/v1-app.png?raw=true)
 
 You should be able to access the application
 
@@ -123,7 +123,7 @@ HTTP://PUBLIC_IP
 ```
 
 Keep refreshing the page!
-![Alt text](https://github.com/HealthStarInformatics/service-mesh/blob/master/istio-feature-demos/blue-green/istio-manifests/traffic-routing/v1-app.png?raw=true)
-![Alt text](https://github.com/HealthStarInformatics/service-mesh/blob/master/istio-feature-demos/blue-green/istio-manifests/traffic-routing/v2-app.png?raw=true)
+![Alt text](https://github.com/HealthStarInformatics/service-mesh/blob/master/istio-feature-demos/sentiment-analyzer-app/blue-green/istio-manifests/traffic-routing/v1-app.png?raw=true)
+![Alt text](https://github.com/HealthStarInformatics/service-mesh/blob/master/istio-feature-demos/sentiment-analyzer-app/blue-green/istio-manifests/traffic-routing/v2-app.png?raw=true)
 
 **This concludes leveraging blue-green deployment using Istio**
