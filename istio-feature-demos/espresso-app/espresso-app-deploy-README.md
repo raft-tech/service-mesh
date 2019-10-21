@@ -87,4 +87,9 @@ istio-ingressgateway   LoadBalancer   10.59.249.176   35.x.52.174   15020:30875/
 ```
 Access the application: http://35.x.52.174
 ```
+
+![Alt text](https://github.com/HealthStarInformatics/service-mesh/blob/master/istio-feature-demos/espresso-app/images/espresso.png?raw=true)
+![Alt text](https://github.com/HealthStarInformatics/service-mesh/blob/master/istio-feature-demos/espresso-app/images/espresso-v1.png?raw=true)
+![Alt text](https://github.com/HealthStarInformatics/service-mesh/blob/master/istio-feature-demos/espresso-app/images/espresso-v2.png?raw=true)
+
 **This concludes deploying v1 and v2 versions of espresso application and expose the application using istio's ingress gateway**
