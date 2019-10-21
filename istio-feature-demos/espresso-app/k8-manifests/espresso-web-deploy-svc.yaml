@@ -1,0 +1,41 @@
+## Espresso Frontend web application
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: espresso-shop-web
+spec:
+  replicas: 1
+  selector:
+      matchLabels:
+        app: espresso-shop-web
+  template:
+    metadata:
+      labels:
+        app: espresso-shop-web
+        version: v1
+    spec:
+      containers:
+      - image: sanjeevrg/espresso-shop-web
+        imagePullPolicy: IfNotPresent
+        name: espresso-shop-web
+        ports:
+        - containerPort: 80
+          name: http
+        env:
+        - name: ProductCatalogUrl
+          value: "http://espresso-shop-product-catalog-svc:8091"
+        - name: ReviewsUrl
+          value: "http://espresso-shop-reviews-svc:8092"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: espresso-shop-web-svc
+spec:
+  selector:
+    app: espresso-shop-web
+  type: LoadBalancer
+  ports:
+  - port: 8090
+    targetPort: 80
+    name: http

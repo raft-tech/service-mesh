@@ -1,0 +1,37 @@
+---
+# Espresso Shop Product Catalog
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: espresso-shop-product-catalog
+spec:
+  replicas: 1
+  selector:
+      matchLabels:
+        app: espresso-shop-product-catalog
+  template:
+    metadata:
+      labels:
+        app: espresso-shop-product-catalog
+        version: v1
+    spec:
+      containers:
+      - image: sanjeevrg/espresso-shop-product-catalog
+        imagePullPolicy: IfNotPresent
+        name: espresso-shop-product-catalog
+        ports:
+        - containerPort: 80
+          name: http
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: espresso-shop-product-catalog-svc
+spec:
+  selector:
+    app: espresso-shop-product-catalog
+  type: LoadBalancer
+  ports:
+  - port: 8091
+    targetPort: 80
+    name: http

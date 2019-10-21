@@ -1,0 +1,28 @@
+## Espresso Shop Reviews V2
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: espresso-shop-reviews-v2
+spec:
+  replicas: 1
+  selector:
+      matchLabels:
+        app: espresso-shop-reviews
+        version: v2
+  template:
+    metadata:
+      labels:
+        app: espresso-shop-reviews
+        version: v2
+    spec:
+      containers:
+      - image: sanjeevrg/espresso-shop-reviews:v2
+        imagePullPolicy: IfNotPresent
+        name: espresso-shop-reviews
+        ports:
+        - containerPort: 80
+          name: http
+        env:
+        - name: SERVICE_VERSION
+          value: "v2"
