@@ -40,7 +40,7 @@ Istio is a greek word which means **"To Sail"**
   * Policy enforcement
   * Quota management/Rate limiting
 
-# Data Plane**
+# Data Plane
 **Envoy proxy**
 * Envoy is written in c++
 * **Envoy is an application proxy that we can insert into the request path of our applications to provide features like:**
