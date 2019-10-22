@@ -35,3 +35,5 @@ Three different applications are deployed on GKE cluster
 * Metrics scraping using **Prometheus**
 * Metrics Visualization via dashboards using **Grafana**
 * Service Mesh observability using **Kiali** (Istio mesh console)
+
+Click here https://drive.google.com/open?id=1CxWiTJwVhDvxQKcSvuQSuL-Qnl5PUK9k to watch all the demos that cover above mentioned topics
