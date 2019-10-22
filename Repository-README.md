@@ -3,18 +3,21 @@ This repository mainly focuses on the implementation of service mesh on kubernet
 Istio is one of the powerful and feature rich open source service mesh option
 
 In this repository following topics are covered:
+
 **Installation and Configuration**
 * Managed Kubernetes Installation(GKE) using Terraform
 * Minikube(Single node kubernetes cluster) Installation
 * Istio Installation on GKE and Minikube
 
 **Application Deployment**
+
 Three different applications are deployed on GKE cluster
 * Guestbook application
 * Sentiment Analyzer
 * Espresso app (coffee product catalog + reviews)
 
 **Istio Feature Implementation**
+
 **Traffic Management**
 * Routing to a specific version of a service (Example: v1 or v2)
 * Blue-Green Deployment
