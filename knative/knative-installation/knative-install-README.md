@@ -99,5 +99,6 @@ prometheus-system-1                   1/1     Running   0          6h55m
 ```
 
 Click [here](https://drive.google.com/open?id=16qwcx9i8i96ubh1aQN05D_OVv5rLWdVw) to watch knative install video
+
 **This concludes knative and Istio install on GKE**
 
