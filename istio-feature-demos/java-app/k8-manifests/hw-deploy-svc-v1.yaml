@@ -1,0 +1,54 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: helloworld-service-v1
+  labels:
+    app: helloworld-service
+    version: "1.0"
+    visualize: "true"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: helloworld-service
+      version: "1.0"
+      serving: "true"
+  template:
+    metadata:
+      labels:
+        app: helloworld-service
+        version: "1.0"
+        serving: "true"
+        visualize: "true"
+    spec:
+      containers:
+      - name: helloworld-service
+        image: sanjeevrg/hw-service-istio:1.0
+        livenessProbe:
+          initialDelaySeconds: 60
+          httpGet:
+            path: /actuator/health
+            port: 8080
+        readinessProbe:
+          httpGet:
+            path: /hello/ready
+            port: 8080
+        ports:
+        - name: http
+          containerPort: 8080
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: helloworld-service
+  labels:
+    app: helloworld-service
+    visualize: "true"
+spec:
+  ports:
+    - port: 8080
+      targetPort: 8080
+      name: http
+  selector:
+    app: helloworld-service
+    serving: "true"

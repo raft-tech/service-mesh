@@ -15,6 +15,7 @@ Three different applications are deployed on GKE cluster
 * Guestbook application
 * Sentiment Analyzer
 * Espresso app (coffee product catalog + reviews)
+* Java app
 
 **Istio Feature Implementation**
 
@@ -24,11 +25,16 @@ Three different applications are deployed on GKE cluster
 * A/B testing
 * Canary Deployment
 * User Based Routing
+* Traffic Splitting
 
 **Resiliency**
 * Timeouts
 * Fault Injection
 * Circuit breaker
+
+**Security**
+* mTLS
+* RBAC
 
 **Observability (metrics and tracing)**
 * Distributed Tracing using **Jaegar**

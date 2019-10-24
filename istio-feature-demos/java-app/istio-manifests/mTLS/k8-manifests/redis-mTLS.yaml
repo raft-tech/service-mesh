@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redis
+  labels:
+    app: redis
+    visualize: "true"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: redis
+      version: "4.0.2"
+  template:
+    metadata:
+      labels:
+        app: redis
+        version: "4.0.2"
+        visualize: "true"
+    spec:
+      containers:
+      - name: redis
+        image: redis:latest
+        livenessProbe:
+          tcpSocket:
+            port: 6379
+        ports:
+        - name: redis-server
+          containerPort: 6379
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: redis
+  labels:
+    app: redis
+    visualize: "true"
+spec:
+  ports:
+    - port: 6379
+      targetPort: 6379
+      name: redis
+  selector:
+    app: redis
